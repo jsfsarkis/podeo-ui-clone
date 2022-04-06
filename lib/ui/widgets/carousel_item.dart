@@ -35,7 +35,7 @@ class CarouselItem extends StatelessWidget {
             Navigator.pushNamed(context, PlayerScreen.id);
           },
           child: Container(
-            margin: const EdgeInsets.only(left: 120, right: 120),
+            margin: const EdgeInsets.only(left: 100, right: 100),
             padding: const EdgeInsets.only(left: 10, right: 40),
             decoration: BoxDecoration(
               color: AppColors.accentColor,

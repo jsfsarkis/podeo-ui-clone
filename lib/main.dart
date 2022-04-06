@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:podeo_ui_clone/ui/screens/home_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/player_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/profile_screen.dart';
@@ -7,7 +9,10 @@ import 'package:podeo_ui_clone/ui/screens/splash_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/tab_bar_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.id,
