@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:podeo_ui_clone/ui/screens/home_screen.dart';
+import 'package:podeo_ui_clone/ui/screens/player_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/profile_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/search_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/splash_screen.dart';
@@ -15,14 +16,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.id,
       routes: {
         SplashScreen.id: (context) => const SplashScreen(),
         TabBarScreen.id: (context) => const TabBarScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
-SearchScreen.id: (context) => const SearchScreen(),
+        SearchScreen.id: (context) => const SearchScreen(),
         ProfileScreen.id: (context) => const ProfileScreen(),
-
+        PlayerScreen.id: (context) => const PlayerScreen(),
       },
     );
   }
