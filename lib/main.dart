@@ -2,9 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:podeo_ui_clone/ui/screens/home_screen.dart';
+import 'package:podeo_ui_clone/ui/screens/login_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/player_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/profile_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/search_screen.dart';
+import 'package:podeo_ui_clone/ui/screens/sign_up_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/splash_screen.dart';
 import 'package:podeo_ui_clone/ui/screens/tab_bar_screen.dart';
 
@@ -31,6 +33,8 @@ class MyApp extends StatelessWidget {
         SearchScreen.id: (context) => const SearchScreen(),
         ProfileScreen.id: (context) => const ProfileScreen(),
         PlayerScreen.id: (context) => const PlayerScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
+        SignUpScreen.id: (context) => const SignUpScreen(),
       },
     );
   }

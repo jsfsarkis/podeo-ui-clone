@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:podeo_ui_clone/ui/screens/login_screen.dart';
+import 'package:podeo_ui_clone/ui/screens/sign_up_screen.dart';
 import 'package:podeo_ui_clone/ui/theme/app_colors.dart';
 import 'package:podeo_ui_clone/ui/widgets/auth_button.dart';
 import 'package:podeo_ui_clone/ui/widgets/social_sign_in.dart';
@@ -15,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(top: 100),
           child: Column(
-            children: const [
+            children: [
               Center(
                 child: Text(
                   'Podeo',
@@ -40,7 +42,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Center(
+              const Center(
                 child: Text(
                   'Free Forever.',
                   textAlign: TextAlign.center,
@@ -51,12 +53,24 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 50),
-              AuthButton(color: AppColors.accentColor, text: 'SIGN UP FREE'),
-              SizedBox(height: 20),
-              AuthButton(color: AppColors.secondaryColor, text: 'LOGIN'),
-              SizedBox(height: 50),
-              SocialSignIn(),
+              const SizedBox(height: 50),
+              AuthButton(
+                color: AppColors.accentColor,
+                text: 'SIGN UP FREE',
+                onTap: () {
+                  Navigator.pushNamed(context, SignUpScreen.id);
+                },
+              ),
+              const SizedBox(height: 20),
+              AuthButton(
+                color: AppColors.secondaryColor,
+                text: 'LOGIN',
+                onTap: () {
+                  Navigator.pushNamed(context, LoginScreen.id);
+                },
+              ),
+              const SizedBox(height: 50),
+              const SocialSignIn(),
             ],
           ),
         ),
